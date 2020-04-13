@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit', (e) => {
 
     const location = search.value;
     messageOne.textContent = 'Fetching Data is in progress ...';
-    fetch(`http://192.168.0.113:3000/weather?address=${location}`).then((response) => {
+    fetch(`/weather?address=${location}`).then((response) => {
         response.json().then((data)=>{
             covidElement.style.display = 'none';
             if(data.error){
