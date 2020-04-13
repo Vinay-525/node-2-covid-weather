@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Use this website to get the weather as well as COVID 19 Data</p>
+
+        <form>
+            <label for="address">Address :</label>
+            <input type="text" name="address">
+            <button type='submit'>Submit</button>
+        </form>
+
+        <hr>
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+        <div id="covid">
+                <div>
+                    <h3>DISTRICT</h3>
+                    <li id="district">
+                        <ul>
+                            <li id="confirmed"></li>
+                            <li id="recovered"></li>
+                            <li id="death"></li>
+                        </ul>
+                    </li>
+                </div>
+                <hr>
+                <div>
+                    <h3>STATE</h3>
+                    <li id="state">
+                        <ul>
+                            <li id="confirmed"></li>
+                            <li id="recovered"></li>
+                            <li id="death"></li>
+                        </ul>
+                    </li>
+                </div>
+                <hr>
+                <div>
+                    <h3>COUNTRY</h3>
+                    <li id="country">
+                        <ul>
+                            <li id="confirmed"></li>
+                            <li id="recovered"></li>
+                            <li id="death"></li>
+                        </ul>
+                    </li>
+                </div>
+        </div>
+    </div>
+
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+</html>
