@@ -24,14 +24,14 @@ app.use(express.static(publicDirectoryPath));
 
 app.get('/', (req,res) => {
     res.render('index', {
-        title: 'Weather App',
+        title: 'Weather | COVID 19',
         name: 'Vinay Bansal'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About Page',
+        title: 'About',
         name: 'Vinay Bansal'
     });
 } )
@@ -40,7 +40,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     // res.sendFile(path.join(publicDirectoryPath, 'help.html' ));
     res.render('help', {
-        title: 'Help Page!!!',
+        title: 'Help',
         name: 'Vinay Bansal'
     })
 })
@@ -69,7 +69,8 @@ app.get('/weather', (req, res) => {
                         if(error){
                             outJSON.error_covid = error;
                         } else{
-                            outJSON.forcast = `${data.weather_descriptions} .It is currently ${data.temperature} degree Celsius. It feels like ${data.apparentTemperature} degree Celsius`;
+                            outJSON.forcast = `${data.weather_descriptions} .It is currently ${data.temperature} degree Celsius. It feels like ${data.apparentTemperature} degree Celsius. The
+                            current humidity is ${data.humidity} %`;
                         }
                         return res.send(outJSON);
                     })

@@ -37,8 +37,16 @@ header a {
     text-decoration: none;
 }
 
+
+
 .portrait{
     width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: block;
+    margin-top: 40px;
+    margin-left: 150px;
+    border: 1px solid #ccc;
 }
 
 input{

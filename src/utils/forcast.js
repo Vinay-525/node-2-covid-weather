@@ -13,7 +13,8 @@ const forcast = (lattitude, longitude , callback) => {
             callback(undefined, {
                 temperature: data.temperature,
                 apparentTemperature: data.feelslike,
-                weather_descriptions: data.weather_descriptions[0]
+                weather_descriptions: data.weather_descriptions[0],
+                humidity: data.humidity
             });
         }
     })
