@@ -44,8 +44,7 @@ header a {
     height: 250px;
     border-radius: 50%;
     display: block;
-    margin-top: 40px;
-    margin-left: 150px;
+    margin: 40px auto;
     border: 1px solid #ccc;
 }
 
