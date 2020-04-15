@@ -19,11 +19,13 @@ const extractCountryWiseData = (country, state, district, response) => {
     }else{
         const covidCountryWiseData = response.body.countries_stat;
         const countryCode = lookup.byCountry(country);
-    
+        
         countryData = covidCountryWiseData.find((country_data) => {
+            
             return ((country_data.country_name.toLowerCase() == country.toLowerCase())||
-                    (country_data.country_name.toLowerCase() == countryCode.iso2.toLowerCase()) ||
-                    (country_data.country_name.toLowerCase() == countryCode.iso3.toLowerCase()));
+                    (countryCode) && 
+                    ((country_data.country_name.toLowerCase() == countryCode.iso2.toLowerCase()) ||
+                    (country_data.country_name.toLowerCase() == countryCode.iso3.toLowerCase())));
         })
     }
     
