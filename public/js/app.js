@@ -18,6 +18,8 @@ weatherForm.addEventListener('submit', (e) => {
     fetch(`/weather?address=${location}`).then((response) => {
         response.json().then((data)=>{
             covidElement.style.display = 'none';
+            messageOne.textContent = '';
+            messageTwo.textContent = '';
             if(data.error){
                 console.log(data.error);
                 messageOne.textContent = data.error;
